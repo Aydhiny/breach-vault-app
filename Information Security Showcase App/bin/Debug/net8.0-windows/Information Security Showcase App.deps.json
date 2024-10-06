@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Information Security Showcase App/1.0.0": {
+        "runtime": {
+          "Information Security Showcase App.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Information Security Showcase App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
