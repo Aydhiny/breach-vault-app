@@ -30,32 +30,34 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStegano));
-            pictureBox1 = new PictureBox();
+            pcbPrije = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             btnIzvrsi = new Button();
             txtPoruka = new TextBox();
             label3 = new Label();
             err = new ErrorProvider(components);
-            pictureBox2 = new PictureBox();
+            pcbPoslije = new PictureBox();
             label4 = new Label();
-            button1 = new Button();
+            btnPronadji = new Button();
             label5 = new Label();
-            label6 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lblPronadji = new Label();
+            btnSpremi = new Button();
+            ((System.ComponentModel.ISupportInitialize)pcbPrije).BeginInit();
             ((System.ComponentModel.ISupportInitialize)err).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbPoslije).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pcbPrije
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 60);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(280, 281);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pcbPrije.Image = (Image)resources.GetObject("pcbPrije.Image");
+            pcbPrije.Location = new Point(12, 60);
+            pcbPrije.Name = "pcbPrije";
+            pcbPrije.Size = new Size(280, 281);
+            pcbPrije.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbPrije.TabIndex = 0;
+            pcbPrije.TabStop = false;
+            pcbPrije.DoubleClick += pcbPrije_DoubleClick;
             // 
             // label1
             // 
@@ -89,10 +91,11 @@
             btnIzvrsi.ForeColor = SystemColors.Control;
             btnIzvrsi.Location = new Point(14, 391);
             btnIzvrsi.Name = "btnIzvrsi";
-            btnIzvrsi.Size = new Size(280, 39);
+            btnIzvrsi.Size = new Size(150, 39);
             btnIzvrsi.TabIndex = 2;
             btnIzvrsi.Text = "Izvrši steganografiju";
             btnIzvrsi.UseVisualStyleBackColor = false;
+            btnIzvrsi.Click += btnIzvrsi_Click;
             // 
             // txtPoruka
             // 
@@ -100,6 +103,7 @@
             txtPoruka.Name = "txtPoruka";
             txtPoruka.Size = new Size(278, 23);
             txtPoruka.TabIndex = 3;
+            txtPoruka.DoubleClick += txtPoruka_DoubleClick;
             // 
             // label3
             // 
@@ -116,15 +120,16 @@
             // 
             err.ContainerControl = this;
             // 
-            // pictureBox2
+            // pcbPoslije
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(365, 60);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(280, 281);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            pcbPoslije.Image = (Image)resources.GetObject("pcbPoslije.Image");
+            pcbPoslije.Location = new Point(365, 60);
+            pcbPoslije.Name = "pcbPoslije";
+            pcbPoslije.Size = new Size(280, 281);
+            pcbPoslije.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbPoslije.TabIndex = 0;
+            pcbPoslije.TabStop = false;
+            pcbPoslije.DoubleClick += pcbPoslije_DoubleClick;
             // 
             // label4
             // 
@@ -137,19 +142,20 @@
             label4.TabIndex = 1;
             label4.Text = "Pronalazak tajnog koda";
             // 
-            // button1
+            // btnPronadji
             // 
-            button1.BackColor = SystemColors.ActiveBorder;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(365, 391);
-            button1.Name = "button1";
-            button1.Size = new Size(280, 39);
-            button1.TabIndex = 2;
-            button1.Text = "Pronađi tajni kod";
-            button1.UseVisualStyleBackColor = false;
+            btnPronadji.BackColor = SystemColors.ActiveBorder;
+            btnPronadji.FlatAppearance.BorderSize = 0;
+            btnPronadji.FlatStyle = FlatStyle.Flat;
+            btnPronadji.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnPronadji.ForeColor = SystemColors.ControlText;
+            btnPronadji.Location = new Point(365, 391);
+            btnPronadji.Name = "btnPronadji";
+            btnPronadji.Size = new Size(280, 39);
+            btnPronadji.TabIndex = 2;
+            btnPronadji.Text = "Pronađi tajni kod";
+            btnPronadji.UseVisualStyleBackColor = false;
+            btnPronadji.Click += btnPronadji_Click;
             // 
             // label5
             // 
@@ -163,17 +169,28 @@
             label5.TabIndex = 1;
             label5.Text = "Pronađeni kod:";
             // 
-            // label6
+            // lblPronadji
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label6.ForeColor = SystemColors.MenuHighlight;
-            label6.Location = new Point(597, 361);
-            label6.Name = "label6";
-            label6.Size = new Size(48, 20);
-            label6.TabIndex = 1;
-            label6.Text = "NULL";
+            lblPronadji.AutoSize = true;
+            lblPronadji.BackColor = Color.Transparent;
+            lblPronadji.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblPronadji.ForeColor = SystemColors.MenuHighlight;
+            lblPronadji.Location = new Point(597, 361);
+            lblPronadji.Name = "lblPronadji";
+            lblPronadji.Size = new Size(48, 20);
+            lblPronadji.TabIndex = 1;
+            lblPronadji.Text = "NULL";
+            // 
+            // btnSpremi
+            // 
+            btnSpremi.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnSpremi.Location = new Point(170, 391);
+            btnSpremi.Name = "btnSpremi";
+            btnSpremi.Size = new Size(122, 39);
+            btnSpremi.TabIndex = 4;
+            btnSpremi.Text = "Spremi modified";
+            btnSpremi.UseVisualStyleBackColor = true;
+            btnSpremi.Click += btnSpremi_Click;
             // 
             // frmStegano
             // 
@@ -182,40 +199,42 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(672, 453);
+            Controls.Add(btnSpremi);
             Controls.Add(txtPoruka);
-            Controls.Add(button1);
+            Controls.Add(btnPronadji);
             Controls.Add(btnIzvrsi);
             Controls.Add(label2);
-            Controls.Add(label6);
+            Controls.Add(lblPronadji);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label4);
             Controls.Add(label1);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(pcbPoslije);
+            Controls.Add(pcbPrije);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmStegano";
             Text = "Steganografija :: Primjer";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbPrije).EndInit();
             ((System.ComponentModel.ISupportInitialize)err).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbPoslije).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pcbPrije;
         private Label label1;
         private Label label2;
         private Button btnIzvrsi;
         private TextBox txtPoruka;
         private Label label3;
         private ErrorProvider err;
-        private Button button1;
+        private Button btnPronadji;
         private Label label4;
-        private PictureBox pictureBox2;
-        private Label label6;
+        private PictureBox pcbPoslije;
+        private Label lblPronadji;
         private Label label5;
+        private Button btnSpremi;
     }
 }

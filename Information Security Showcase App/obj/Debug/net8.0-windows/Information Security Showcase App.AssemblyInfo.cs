@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Information Security Showcase App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84c944a85e1c04219c2a85605cb8c51cb24b4646")]
 [assembly: System.Reflection.AssemblyProductAttribute("Information Security Showcase App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Information Security Showcase App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
