@@ -28,213 +28,236 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStegano));
-            pcbPrije = new PictureBox();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            openToolStripMenuItem = new ToolStripMenuItem();
+            imageToolStripMenuItem = new ToolStripMenuItem();
+            textToolStripMenuItem = new ToolStripMenuItem();
+            saveToolStripMenuItem = new ToolStripMenuItem();
+            imageToolStripMenuItem1 = new ToolStripMenuItem();
+            textToolStripMenuItem1 = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            btnSakrij = new Button();
+            encryptCheckBox = new CheckBox();
+            grpEncrypt = new GroupBox();
             label1 = new Label();
-            label2 = new Label();
-            btnIzvrsi = new Button();
-            txtPoruka = new TextBox();
-            label3 = new Label();
-            err = new ErrorProvider(components);
-            pcbPoslije = new PictureBox();
-            label4 = new Label();
-            btnPronadji = new Button();
-            label5 = new Label();
-            lblPronadji = new Label();
-            btnSpremi = new Button();
-            ((System.ComponentModel.ISupportInitialize)pcbPrije).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)err).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pcbPoslije).BeginInit();
+            passwordTextBox = new TextBox();
+            imagePictureBox = new PictureBox();
+            notesLabel = new Label();
+            dataTextBox = new TextBox();
+            btnExtract = new Button();
+            menuStrip1.SuspendLayout();
+            grpEncrypt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePictureBox).BeginInit();
             SuspendLayout();
             // 
-            // pcbPrije
+            // menuStrip1
             // 
-            pcbPrije.Image = (Image)resources.GetObject("pcbPrije.Image");
-            pcbPrije.Location = new Point(12, 60);
-            pcbPrije.Name = "pcbPrije";
-            pcbPrije.Size = new Size(280, 281);
-            pcbPrije.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbPrije.TabIndex = 0;
-            pcbPrije.TabStop = false;
-            pcbPrije.DoubleClick += pcbPrije_DoubleClick;
+            menuStrip1.BackColor = Color.White;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(446, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openToolStripMenuItem, saveToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // openToolStripMenuItem
+            // 
+            openToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { imageToolStripMenuItem, textToolStripMenuItem });
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new Size(103, 22);
+            openToolStripMenuItem.Text = "Open";
+            // 
+            // imageToolStripMenuItem
+            // 
+            imageToolStripMenuItem.Name = "imageToolStripMenuItem";
+            imageToolStripMenuItem.Size = new Size(107, 22);
+            imageToolStripMenuItem.Text = "Image";
+            imageToolStripMenuItem.Click += imageToolStripMenuItem_Click;
+            // 
+            // textToolStripMenuItem
+            // 
+            textToolStripMenuItem.Name = "textToolStripMenuItem";
+            textToolStripMenuItem.Size = new Size(107, 22);
+            textToolStripMenuItem.Text = "Text";
+            textToolStripMenuItem.Click += textToolStripMenuItem_Click;
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { imageToolStripMenuItem1, textToolStripMenuItem1 });
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(103, 22);
+            saveToolStripMenuItem.Text = "Save";
+            // 
+            // imageToolStripMenuItem1
+            // 
+            imageToolStripMenuItem1.Name = "imageToolStripMenuItem1";
+            imageToolStripMenuItem1.Size = new Size(107, 22);
+            imageToolStripMenuItem1.Text = "Image";
+            imageToolStripMenuItem1.Click += imageToolStripMenuItem1_Click;
+            // 
+            // textToolStripMenuItem1
+            // 
+            textToolStripMenuItem1.Name = "textToolStripMenuItem1";
+            textToolStripMenuItem1.Size = new Size(107, 22);
+            textToolStripMenuItem1.Text = "Text";
+            textToolStripMenuItem1.Click += textToolStripMenuItem1_Click;
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Text = "Help";
+            helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
+            // 
+            // btnSakrij
+            // 
+            btnSakrij.BackColor = SystemColors.MenuHighlight;
+            btnSakrij.FlatStyle = FlatStyle.Flat;
+            btnSakrij.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSakrij.ForeColor = SystemColors.ControlLightLight;
+            btnSakrij.Location = new Point(12, 533);
+            btnSakrij.Name = "btnSakrij";
+            btnSakrij.Size = new Size(168, 51);
+            btnSakrij.TabIndex = 1;
+            btnSakrij.Text = "Sakrij poruku";
+            btnSakrij.UseVisualStyleBackColor = false;
+            btnSakrij.Click += btnSakrij_Click;
+            // 
+            // encryptCheckBox
+            // 
+            encryptCheckBox.AutoSize = true;
+            encryptCheckBox.ForeColor = SystemColors.ControlLightLight;
+            encryptCheckBox.Location = new Point(6, 26);
+            encryptCheckBox.Name = "encryptCheckBox";
+            encryptCheckBox.Size = new Size(79, 19);
+            encryptCheckBox.TabIndex = 2;
+            encryptCheckBox.Text = "Encrypted";
+            encryptCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // grpEncrypt
+            // 
+            grpEncrypt.Controls.Add(label1);
+            grpEncrypt.Controls.Add(passwordTextBox);
+            grpEncrypt.Controls.Add(encryptCheckBox);
+            grpEncrypt.ForeColor = SystemColors.ControlLightLight;
+            grpEncrypt.Location = new Point(12, 467);
+            grpEncrypt.Name = "grpEncrypt";
+            grpEncrypt.Size = new Size(422, 60);
+            grpEncrypt.TabIndex = 3;
+            grpEncrypt.TabStop = false;
+            grpEncrypt.Text = "Encryption";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.ForeColor = SystemColors.ControlLight;
-            label1.Location = new Point(12, 42);
+            label1.Location = new Point(108, 27);
             label1.Name = "label1";
-            label1.Size = new Size(201, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Vaša slika :: Insertovanje tajne poruke";
+            label1.Size = new Size(60, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Password:";
             // 
-            // label2
+            // passwordTextBox
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label2.ForeColor = SystemColors.ControlLight;
-            label2.Location = new Point(12, 17);
-            label2.Name = "label2";
-            label2.Size = new Size(123, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Steganografija";
+            passwordTextBox.Location = new Point(174, 22);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(242, 23);
+            passwordTextBox.TabIndex = 3;
             // 
-            // btnIzvrsi
+            // imagePictureBox
             // 
-            btnIzvrsi.BackColor = SystemColors.HotTrack;
-            btnIzvrsi.FlatAppearance.BorderSize = 0;
-            btnIzvrsi.FlatStyle = FlatStyle.Flat;
-            btnIzvrsi.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnIzvrsi.ForeColor = SystemColors.Control;
-            btnIzvrsi.Location = new Point(14, 391);
-            btnIzvrsi.Name = "btnIzvrsi";
-            btnIzvrsi.Size = new Size(150, 39);
-            btnIzvrsi.TabIndex = 2;
-            btnIzvrsi.Text = "Izvrši steganografiju";
-            btnIzvrsi.UseVisualStyleBackColor = false;
-            btnIzvrsi.Click += btnIzvrsi_Click;
+            imagePictureBox.Image = (Image)resources.GetObject("imagePictureBox.Image");
+            imagePictureBox.Location = new Point(12, 27);
+            imagePictureBox.Name = "imagePictureBox";
+            imagePictureBox.Size = new Size(422, 312);
+            imagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            imagePictureBox.TabIndex = 4;
+            imagePictureBox.TabStop = false;
             // 
-            // txtPoruka
+            // notesLabel
             // 
-            txtPoruka.Location = new Point(14, 362);
-            txtPoruka.Name = "txtPoruka";
-            txtPoruka.Size = new Size(278, 23);
-            txtPoruka.TabIndex = 3;
-            txtPoruka.DoubleClick += txtPoruka_DoubleClick;
+            notesLabel.AutoSize = true;
+            notesLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            notesLabel.ForeColor = SystemColors.ControlLightLight;
+            notesLabel.Location = new Point(12, 587);
+            notesLabel.Name = "notesLabel";
+            notesLabel.Size = new Size(59, 21);
+            notesLabel.TabIndex = 6;
+            notesLabel.Text = "Notes:";
             // 
-            // label3
+            // dataTextBox
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.ForeColor = SystemColors.ControlLight;
-            label3.Location = new Point(14, 344);
-            label3.Name = "label3";
-            label3.Size = new Size(137, 15);
-            label3.TabIndex = 1;
-            label3.Text = "Unesite skrivenu poruku:";
+            dataTextBox.Location = new Point(12, 345);
+            dataTextBox.Multiline = true;
+            dataTextBox.Name = "dataTextBox";
+            dataTextBox.Size = new Size(422, 116);
+            dataTextBox.TabIndex = 7;
             // 
-            // err
+            // btnExtract
             // 
-            err.ContainerControl = this;
-            // 
-            // pcbPoslije
-            // 
-            pcbPoslije.Image = (Image)resources.GetObject("pcbPoslije.Image");
-            pcbPoslije.Location = new Point(365, 60);
-            pcbPoslije.Name = "pcbPoslije";
-            pcbPoslije.Size = new Size(280, 281);
-            pcbPoslije.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbPoslije.TabIndex = 0;
-            pcbPoslije.TabStop = false;
-            pcbPoslije.DoubleClick += pcbPoslije_DoubleClick;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.ForeColor = SystemColors.ControlLight;
-            label4.Location = new Point(365, 42);
-            label4.Name = "label4";
-            label4.Size = new Size(130, 15);
-            label4.TabIndex = 1;
-            label4.Text = "Pronalazak tajnog koda";
-            // 
-            // btnPronadji
-            // 
-            btnPronadji.BackColor = SystemColors.ActiveBorder;
-            btnPronadji.FlatAppearance.BorderSize = 0;
-            btnPronadji.FlatStyle = FlatStyle.Flat;
-            btnPronadji.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnPronadji.ForeColor = SystemColors.ControlText;
-            btnPronadji.Location = new Point(365, 391);
-            btnPronadji.Name = "btnPronadji";
-            btnPronadji.Size = new Size(280, 39);
-            btnPronadji.TabIndex = 2;
-            btnPronadji.Text = "Pronađi tajni kod";
-            btnPronadji.UseVisualStyleBackColor = false;
-            btnPronadji.Click += btnPronadji_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.ForeColor = SystemColors.ControlLight;
-            label5.Location = new Point(365, 361);
-            label5.Name = "label5";
-            label5.Size = new Size(114, 20);
-            label5.TabIndex = 1;
-            label5.Text = "Pronađeni kod:";
-            // 
-            // lblPronadji
-            // 
-            lblPronadji.AutoSize = true;
-            lblPronadji.BackColor = Color.Transparent;
-            lblPronadji.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lblPronadji.ForeColor = SystemColors.MenuHighlight;
-            lblPronadji.Location = new Point(597, 361);
-            lblPronadji.Name = "lblPronadji";
-            lblPronadji.Size = new Size(48, 20);
-            lblPronadji.TabIndex = 1;
-            lblPronadji.Text = "NULL";
-            // 
-            // btnSpremi
-            // 
-            btnSpremi.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnSpremi.Location = new Point(170, 391);
-            btnSpremi.Name = "btnSpremi";
-            btnSpremi.Size = new Size(122, 39);
-            btnSpremi.TabIndex = 4;
-            btnSpremi.Text = "Spremi modified";
-            btnSpremi.UseVisualStyleBackColor = true;
-            btnSpremi.Click += btnSpremi_Click;
+            btnExtract.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnExtract.Location = new Point(186, 533);
+            btnExtract.Name = "btnExtract";
+            btnExtract.Size = new Size(248, 51);
+            btnExtract.TabIndex = 8;
+            btnExtract.Text = "Extract File";
+            btnExtract.UseVisualStyleBackColor = true;
+            btnExtract.Click += btnExtract_Click;
             // 
             // frmStegano
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(672, 453);
-            Controls.Add(btnSpremi);
-            Controls.Add(txtPoruka);
-            Controls.Add(btnPronadji);
-            Controls.Add(btnIzvrsi);
-            Controls.Add(label2);
-            Controls.Add(lblPronadji);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label4);
-            Controls.Add(label1);
-            Controls.Add(pcbPoslije);
-            Controls.Add(pcbPrije);
+            BackColor = Color.FromArgb(25, 25, 25);
+            ClientSize = new Size(446, 624);
+            Controls.Add(btnExtract);
+            Controls.Add(dataTextBox);
+            Controls.Add(notesLabel);
+            Controls.Add(imagePictureBox);
+            Controls.Add(grpEncrypt);
+            Controls.Add(btnSakrij);
+            Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
             Name = "frmStegano";
-            Text = "Steganografija :: Primjer";
-            ((System.ComponentModel.ISupportInitialize)pcbPrije).EndInit();
-            ((System.ComponentModel.ISupportInitialize)err).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pcbPoslije).EndInit();
+            Text = "Steganografija";
+            Load += frmStegano_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            grpEncrypt.ResumeLayout(false);
+            grpEncrypt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pcbPrije;
+        private MenuStrip menuStrip1;
+        private Button btnSakrij;
+        private CheckBox encryptCheckBox;
+        private GroupBox grpEncrypt;
         private Label label1;
-        private Label label2;
-        private Button btnIzvrsi;
-        private TextBox txtPoruka;
-        private Label label3;
-        private ErrorProvider err;
-        private Button btnPronadji;
-        private Label label4;
-        private PictureBox pcbPoslije;
-        private Label lblPronadji;
-        private Label label5;
-        private Button btnSpremi;
+        private TextBox passwordTextBox;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem openToolStripMenuItem;
+        private ToolStripMenuItem imageToolStripMenuItem;
+        private ToolStripMenuItem textToolStripMenuItem;
+        private ToolStripMenuItem saveToolStripMenuItem;
+        private ToolStripMenuItem imageToolStripMenuItem1;
+        private ToolStripMenuItem textToolStripMenuItem1;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private PictureBox imagePictureBox;
+        private Label notesLabel;
+        private TextBox dataTextBox;
+        private Button btnExtract;
     }
 }

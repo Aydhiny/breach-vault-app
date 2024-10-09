@@ -14,6 +14,7 @@ namespace Information_Security_Showcase_App
         {
             frmStegano steganoGrafija = new frmStegano();
             steganoGrafija.Show();
+            this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
