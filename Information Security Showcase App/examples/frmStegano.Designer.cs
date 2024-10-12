@@ -208,7 +208,7 @@
             btnExtract.Name = "btnExtract";
             btnExtract.Size = new Size(248, 51);
             btnExtract.TabIndex = 8;
-            btnExtract.Text = "Extract File";
+            btnExtract.Text = "Otkrij poruku";
             btnExtract.UseVisualStyleBackColor = true;
             btnExtract.Click += btnExtract_Click;
             // 

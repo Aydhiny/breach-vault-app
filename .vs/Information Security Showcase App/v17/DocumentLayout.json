@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\User\\Programiranje\\Full-Stack Roadmap\\Complex Apps\\information-security-showcase-app\\Information Security Showcase App\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB36389-3B30-4939-929F-37146E03E2A9}|Information Security Showcase App\\Information Security Showcase App.csproj|e:\\user\\programiranje\\full-stack roadmap\\complex apps\\information-security-showcase-app\\information security showcase app\\information security showcase app\\examples\\frmstegano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB36389-3B30-4939-929F-37146E03E2A9}|Information Security Showcase App\\Information Security Showcase App.csproj|solutionrelative:information security showcase app\\examples\\frmstegano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmStegano.cs",
+              "DocumentMoniker": "E:\\User\\Programiranje\\Full-Stack Roadmap\\Complex Apps\\information-security-showcase-app\\Information Security Showcase App\\Information Security Showcase App\\examples\\frmStegano.cs",
+              "RelativeDocumentMoniker": "Information Security Showcase App\\examples\\frmStegano.cs",
+              "ToolTip": "E:\\User\\Programiranje\\Full-Stack Roadmap\\Complex Apps\\information-security-showcase-app\\Information Security Showcase App\\Information Security Showcase App\\examples\\frmStegano.cs",
+              "RelativeToolTip": "Information Security Showcase App\\examples\\frmStegano.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAtwDwAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T09:10:47.728Z",
+              "EditorCaption": ""
             }
           ]
         }

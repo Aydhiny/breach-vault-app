@@ -57,7 +57,7 @@ namespace Information_Security_Showcase_App.examples
 
             MessageBox.Show("Your text was hidden in the image successfully!", "Done");
 
-            notesLabel.Text = "Notes: don't forget to save your new image.";
+            notesLabel.Text = "Notes: Ne zaboravite spremiti vašu sliku!";
             notesLabel.ForeColor = Color.OrangeRed;
         }
 
